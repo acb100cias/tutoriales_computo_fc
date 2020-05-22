@@ -1,0 +1,5 @@
+from numpy import *
+from matplotlib.pyplot import *
+
+X=arange(0,1,0.001)
+X
