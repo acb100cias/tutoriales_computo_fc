@@ -1,0 +1,192 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath,amssymb,amsthm}
+
+
+\title{Tutorial de \LaTeX básico 2}
+\author{Augusto Cabrera Becerril}
+\date{\today}
+
+
+\begin{document}
+\maketitle
+\section{Ambientes de lista}
+
+\subsection{Listas numeradas}
+
+\begin{verbatim}
+\begin{enumerate}
+\item algo
+\item algo de algo
+\end{enumerate}
+\end{verbatim}
+\begin{enumerate}
+\item algo
+\item algo de algo
+\end{enumerate}
+
+\subsection{Items}
+
+\begin{verbatim}
+\begin{itemize}
+\item algo
+\item algo de algo
+\end{itemize}
+\end{verbatim}
+\begin{itemize}
+\item algo
+\item algo de algo
+\end{itemize}
+
+\subsection{Descripciones}
+
+
+\begin{verbatim}
+\begin{description}
+\item algo
+\item algo de algo
+\end{description}
+\end{verbatim}
+\begin{description}
+\item[a)] algo
+\item[b)] algo de algo
+\end{description}
+
+
+\subsection{Listas anidadas}
+
+\begin{verbatim}
+\begin{enumerate}
+\item algo
+\begin{enumerate}
+\item algo en la segunda lista
+\begin{enumerate}
+\item tercer nivel
+\end{enumerate}
+\end{enumerate}
+\item algo de algo
+\end{enumerate}
+\end{verbatim}
+\begin{enumerate}
+\item algo
+\begin{enumerate}
+\item algo en la segunda lista
+\begin{enumerate}
+\item tercer nivel
+\end{enumerate}
+\end{enumerate}
+\item algo de algo
+\end{enumerate}
+
+
+\section{Ambientes de ecuaciones}
+\subsection{escribir ecuaciones simples}
+
+\begin{verbatim}
+\begin{equation}
+\frac{\mathrm{d}X}{\mathrm{d}t}=\alpha X(t)(1-\sen(\omega t)
+\end{equation}
+\end{verbatim}
+
+\begin{equation}
+\frac{\mathrm{d}X}{\mathrm{d}t}=\alpha X(t)(1-\sen(\omega t)
+\end{equation}
+
+Sin numeración
+
+\begin{verbatim}
+\begin{equation*}
+\frac{\mathrm{d}X}{\mathrm{d}t}=\alpha X(t)(1-\sen(\omega t)
+\end{equation*}
+\end{verbatim}
+
+\begin{equation*}
+\frac{\mathrm{d}X}{\mathrm{d}t}=\alpha X(t)(1-\sen(\omega t)
+\end{equation*}
+
+\subsection{Expresiones en varios renglones}
+
+\begin{verbatim}
+\begin{align}
+\frac{\mathrm{d}S}{\mathrm{d}t}&=-\beta S(t)I(t)\\
+\frac{\mathrm{d}I}{\mathrm{d}t}&=-\kappa I(t)+\beta X(t)Y(t)\\
+\frac{\mathrm{d}R}{\mathrm{d}t}&=\kappa I(t)
+\end{align}
+\end{verbatim}
+
+\begin{align}
+\frac{\mathrm{d}S}{\mathrm{d}t}&=-\beta S(t)I(t)\\
+\frac{\mathrm{d}I}{\mathrm{d}t}&=-\kappa I(t)+\beta X(t)Y(t)\\
+\frac{\mathrm{d}R}{\mathrm{d}t}&=\kappa I(t)
+\end{align}
+
+\subsection{El ambiente array}
+
+\begin{verbatim}
+$\begin{array}{ccc}
+1&0&0\\
+0&1&0\\
+0&0&1
+\end{array}$
+\end{verbatim}
+
+$\begin{array}{ccc}
+1&0&0\\
+0&1&0\\
+0&0&1
+\end{array}$
+
+Mejoremos un poco
+
+\begin{verbatim}
+$\left(\begin{array}{ccc}
+1&0&0\\
+0&1&0\\
+0&0&1
+\end{array}\right)$
+\end{verbatim}
+
+$\left(\begin{array}{ccc}
+1&0&0\\
+0&1&0\\
+0&0&1
+\end{array}\right)$
+
+\begin{verbatim}
+$$\left[\begin{array}{ccc}
+1&0&0\\
+0&1&0\\
+0&0&1
+\end{array}\right]$$
+\end{verbatim}
+
+$$\left[\begin{array}{ccc}
+1&0&0\\
+0&1&0\\
+0&0&1
+\end{array}\right]$$
+
+\subsection{Un ejemplo}
+
+Hagamos una función escalon
+
+\begin{verbatim}
+\begin{equation}
+f(x)=\left\{\begin{array}{ccc}
+0&\text{si } & x\in (0,\frac{\pi}{2})\\
+1&\text{si } & x=\frac{\pi}{2}\\
+\frac{3}{2}&\text{si } & x\in (\frac{\pi}{2},\pi)
+\end{array}\right.
+\end{equation}
+\end{verbatim}
+
+\begin{equation}
+f(x)=\left\{\begin{array}{ccc}
+0&\text{si } & x\in (0,\frac{\pi}{2})\\
+1&\text{si } & x=\frac{\pi}{2}\\
+\frac{3}{2}&\text{si } & x\in (\frac{\pi}{2},\pi)
+\end{array}\right.
+\end{equation}
+
+\end{document}
